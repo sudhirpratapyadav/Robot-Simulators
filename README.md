@@ -3,7 +3,8 @@
 - This repo is majorly aimed at learning and providing basic templates for various situations which user can then modify. Also each file will be indpendent thus each file contain one simulation setup (this is to keep code in single file so it is easy to explore)
 
 ## Pybullet
-- Currently few pybullet examples are provided (other simulators and more examples would added later. Kindly check out relevant file.
+- Currently few pybullet examples are provided (other simulators and more examples would added later. Kindly check out relevant file.)
+- Currenlty exmaples lack documentation. Kindly try them and see what is happening, I will try to refactor the code and update the files with proper documentation.
 
 ## URDF
 - This folder will contain ready-made URDF files for many robotic arms with different attachments like gripper, camera etc.
