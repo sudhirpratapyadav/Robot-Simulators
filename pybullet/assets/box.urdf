@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<robot name="simple_box">
+  <link name="main_box">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="1.0" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.2" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.2" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="cirlce_a">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.0001" />
+      <inertia  ixx="0.00001" ixy="0.0"  ixz="0.0"  iyy="0.00001"  iyz="0.0"  izz="0.00001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.01"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+
+  <link name="cirlce_b">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.0001" />
+      <inertia  ixx="0.00001" ixy="0.0"  ixz="0.0"  iyy="0.00001"  iyz="0.0"  izz="0.00001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.01"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+
+
+
+  <link name="cirlce_c">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.0001" />
+      <inertia  ixx="0.00001" ixy="0.0"  ixz="0.0"  iyy="0.00001"  iyz="0.0"  izz="0.00001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.01"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+
+  <link name="cirlce_d">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="0.0001" />
+      <inertia  ixx="0.00001" ixy="0.0"  ixz="0.0"  iyy="0.00001"  iyz="0.0"  izz="0.00001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.01"/>
+      </geometry>
+      <material name="yellow"/>
+    </visual>
+  </link>
+
+  <joint name="joint1" type="fixed">
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.1 0.05 0.05" rpy="0 1.57 0"/>
+    <parent link="main_box"/>
+    <child link="cirlce_a"/>
+  </joint>
+
+  <joint name="joint2" type="fixed">
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.1 0.05 -0.05" rpy="0 1.57 0"/>
+    <parent link="main_box"/>
+    <child link="cirlce_b"/>
+  </joint>
+
+  <joint name="joint3" type="fixed">
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.1 -0.05 0.05" rpy="0 1.57 0"/>
+    <parent link="main_box"/>
+    <child link="cirlce_c"/>
+  </joint>
+
+  <joint name="joint4" type="fixed">
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.1 -0.05 -0.05" rpy="0 1.57 0"/>
+    <parent link="main_box"/>
+    <child link="cirlce_d"/>
+  </joint>
+
+  <material name="red"><color rgba="1 0 0 1"/></material>
+  <material name="green"><color rgba="0 1 0 1"/></material>
+  <material name="blue"><color rgba="0 0 1 1"/></material>
+  <material name="yellow"><color rgba="1 1 0 1"/></material>
+
+</robot>
